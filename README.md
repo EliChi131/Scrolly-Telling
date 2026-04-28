@@ -4,3 +4,12 @@ A scrolly-telling website exploring the fascinating history and evolution of the
 
 # Website Link:
 
+Scrolly Telling:
+https://elichi131.github.io/Scrolly-Telling/
+
+Original Museum Site:
+https://elichi131.github.io/MidTermProject/
+
+# Comments:
+
+Took my original museum midterm project and simply put into a "Scrolly Telling" style. Will continue to update.
