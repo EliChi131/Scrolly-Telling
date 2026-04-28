@@ -1,24 +1,57 @@
-// Scroll animation using Intersection Observer
+// Section activation using Intersection Observer
 const observerOptions = {
-    threshold: 0.3,
-    rootMargin: '0px 0px -100px 0px'
+    threshold: [0, 0.15, 0.3, 0.45, 0.6, 0.75],
+    rootMargin: '-20% 0px -20% 0px'
 };
+
+let activeSection = null;
+const sectionVisibility = new Map();
+
+function setActiveSection(nextSection) {
+    if (activeSection === nextSection) {
+        return;
+    }
+    if (activeSection) {
+        activeSection.classList.remove('active');
+    }
+    if (nextSection) {
+        nextSection.classList.add('active');
+    }
+    activeSection = nextSection;
+}
 
 const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('active');
+            sectionVisibility.set(entry.target, entry.intersectionRatio);
         } else {
-            entry.target.classList.remove('active');
+            sectionVisibility.delete(entry.target);
         }
     });
+
+    let nextSection = activeSection;
+    let highestRatio = -1;
+
+    sectionVisibility.forEach((ratio, section) => {
+        if (ratio > highestRatio) {
+            highestRatio = ratio;
+            nextSection = section;
+        }
+    });
+
+    if (nextSection) {
+        setActiveSection(nextSection);
+    }
 }, observerOptions);
 
-// Initialize scroll animations
+// Initialize section transitions
 document.addEventListener('DOMContentLoaded', function() {
-    const steps = document.querySelectorAll('.scroll-step');
-    steps.forEach(step => {
-        observer.observe(step);
+    const sections = document.querySelectorAll('.scroll-section');
+    sections.forEach((section, index) => {
+        observer.observe(section);
+        if (index === 0) {
+            setActiveSection(section);
+        }
     });
 
     // Smooth scroll for anchor links
@@ -33,15 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
-    });
-
-    // Add parallax effect on hero header
-    const heroHeader = document.querySelector('.hero-header');
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        if (heroHeader && scrolled < window.innerHeight) {
-            heroHeader.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
     });
 
     // Fade out hero header on scroll
