@@ -3,49 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrolly Telling</title>
+    <title>Museum of the Electric Guitar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Scrolly Telling</h1>
-            <p>An interactive narrative experience</p>
-        </header>
+    <header class="hero-header">
+        <div class="header-content">
+            <h1>Museum of the Electric Guitar</h1>
+            <p>Explore the evolution of the electric guitar through scrolling history</p>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </div>
+        </div>
+    </header>
 
-        <section class="scrolly-section">
-            <div class="scroll-container">
-                <div class="scroll-text">
-                    <div class="scroll-step">
-                        <h2>Step 1</h2>
-                        <p>Start your story here. This section will appear as you scroll.</p>
-                    </div>
-                    <div class="scroll-step">
-                        <h2>Step 2</h2>
-                        <p>Add more content and watch it come to life as you scroll down.</p>
-                    </div>
-                    <div class="scroll-step">
-                        <h2>Step 3</h2>
-                        <p>Create an engaging narrative with smooth scrolling animations.</p>
-                    </div>
-                    <div class="scroll-step">
-                        <h2>Step 4</h2>
-                        <p>Continue telling your story with as many steps as you need.</p>
-                    </div>
+    <main class="scrolly-container">
+        <section class="scroll-section">
+            <div class="scroll-text">
+                <div class="scroll-step">
+                    <span class="era-label">1920s–1930s</span>
+                    <h2>Origins: The Need for Volume</h2>
+                    <p>Acoustic guitars struggled to be heard in jazz and big‑band settings. Early inventors experimented with pickups and amplification, setting the stage for engineering innovation driven by musical necessity.</p>
                 </div>
-                <div class="scroll-visual">
-                    <div class="visual-content">
-                        <!-- Add images or visualizations here -->
-                        <p>Visual content will go here</p>
-                    </div>
+            </div>
+            <div class="scroll-visual">
+                <div class="visual-content">
+                    <img src="assets/placeholder-1.jpg" alt="Jazz Band">
+                    <p>Jazz band with acoustic guitars</p>
                 </div>
             </div>
         </section>
 
-        <footer>
-            <p>&copy; 2026 Scrolly Telling. All rights reserved.</p>
-        </footer>
-    </div>
+        <section class="scroll-section alternate">
+            <div class="scroll-text">
+                <div class="scroll-step">
+                    <span class="era-label">1931–1932</span>
+                    <h2>First Breakthrough: The Rickenbacker "Frying Pan"</h2>
+                    <p>The first commercially successful electric guitar, featuring a horseshoe‑style pickup. This marks the beginning of the electric guitar as a real instrument.</p>
+                    <p><strong>Horseshoe Pickup Innovation:</strong> The Frying Pan's distinctive horseshoe pickup wrapped around the strings to produce a stronger electromagnetic signal. This design was a major step in making electric guitars loud, clear, and practical for live performance.</p>
+                </div>
+            </div>
+            <div class="scroll-visual">
+                <div class="visual-content">
+                    <img src="assets/placeholder-2.jpg" alt="Rickenbacker Frying Pan">
+                    <p>The iconic Rickenbacker Frying Pan</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-section">
+            <div class="scroll-text">
+                <div class="scroll-step">
+                    <span class="era-label">Early 1940s</span>
+                    <h2>Les Paul's "Log" Prototype</h2>
+                    <p>Les Paul's "Log" prototype—a 4x4 piece of wood with pickups attached—proved that a solid body reduced feedback and increased sustain. This innovation paved the way for the modern electric guitar.</p>
+                    <p><strong>From Prototype to Icon:</strong> The ideas tested in the "Log" later influenced the Gibson Les Paul electric guitar line. What began as a rough engineering experiment evolved into one of the most iconic production models in electric guitar history.</p>
+                </div>
+            </div>
+            <div class="scroll-visual">
+                <div class="visual-content">
+                    <img src="assets/placeholder-3.jpg" alt="Les Paul Log">
+                    <p>The Les Paul Log prototype</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-section alternate">
+            <div class="scroll-text">
+                <div class="scroll-step">
+                    <span class="era-label">1950s</span>
+                    <h2>The Golden Era: Fender & Gibson</h2>
+                    <p><strong>Fender Broadcaster/Telecaster (1950):</strong> The first mass‑produced solid‑body electric guitar, simple and durable.</p>
+                    <p><strong>Gibson Les Paul (1952):</strong> Combined craftsmanship with powerful tone, became one of the most iconic guitars in history.</p>
+                    <p><strong>Fender Stratocaster (1954):</strong> Introduced a contoured body, three single-coil pickups, and a synchronized tremolo system. Its versatile sound and ergonomic design made it a defining guitar for blues, rock, surf, and pop.</p>
+                </div>
+            </div>
+            <div class="scroll-visual">
+                <div class="visual-content">
+                    <img src="assets/placeholder-4.jpg" alt="Stratocaster">
+                    <p>The legendary Fender Stratocaster</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-section">
+            <div class="scroll-text">
+                <div class="scroll-step">
+                    <span class="era-label">1960s–1980s</span>
+                    <h2>Cultural Explosion & Iconic Players</h2>
+                    <p>The electric guitar becomes a symbol of identity, rebellion, and creativity. Influential figures like Jimi Hendrix, Eric Clapton, Jimmy Page, Jeff Beck, and Eddie Van Halen transformed the instrument into a cultural icon.</p>
+                    <p>The guitar becomes central to rock, metal, punk, and pop. Instruments like the Stratocaster, SG, and Les Paul become symbols of an era and a sound that defined generations.</p>
+                </div>
+            </div>
+            <div class="scroll-visual">
+                <div class="visual-content">
+                    <img src="assets/placeholder-5.jpg" alt="Hendrix at Woodstock">
+                    <p>The electric guitar as cultural icon</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-section alternate">
+            <div class="scroll-text">
+                <div class="scroll-step">
+                    <span class="era-label">1960s–Present</span>
+                    <h2>Technology Expands the Sound</h2>
+                    <p><strong>Pickup Evolution:</strong> Key innovation between single‑coil and humbucker pickups. The humbucker reduced noise and increased output, changing the sound of rock and jazz.</p>
+                    <p><strong>Effects Pedals Revolution:</strong> Distortion, fuzz, overdrive, and effects pedals (wah, delay, chorus, flanger) allowed guitarists to create new sounds and textures, expanding creative possibilities.</p>
+                    <p><strong>Amplifier Evolution:</strong> From tubes to solid-state to digital modeling, improving recording and live sound with each innovation.</p>
+                </div>
+            </div>
+            <div class="scroll-visual">
+                <div class="visual-content">
+                    <img src="assets/placeholder-6.jpg" alt="Guitar Effects">
+                    <p>Modern guitar technology and effects</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="scroll-section">
+            <div class="scroll-text">
+                <div class="scroll-step">
+                    <span class="era-label">1990s–Present</span>
+                    <h2>Modern Era: Digital Revolution & Legacy</h2>
+                    <p><strong>Customization & DIY:</strong> Rise of boutique builders and DIY modding culture.</p>
+                    <p><strong>Digital Modeling:</strong> Line 6, Kemper, Helix, and Neural DSP reshape tone creation, giving players flexible live rigs and consistent direct-recording tones.</p>
+                    <p>Despite digital music trends, the electric guitar maintains cultural relevance and remains a symbol of creativity and personal expression across rock, pop, indie, and beyond.</p>
+                </div>
+            </div>
+            <div class="scroll-visual">
+                <div class="visual-content">
+                    <img src="assets/placeholder-7.jpg" alt="Modern Guitar Tech">
+                    <p>The future of guitar technology</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Museum of the Electric Guitar. All rights reserved.</p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
